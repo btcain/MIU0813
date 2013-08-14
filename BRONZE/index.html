@@ -19,48 +19,44 @@
 </head>
 <body>
   <div data-role="page" data-control-title="Home" id="home">
-      <div data-role="panel" id="panel2" data-position="left" data-display="reveal"
-      data-theme="a">
-          <ul data-role="listview" data-divider-theme="h" data-inset="false">
-              <li data-role="list-divider" role="heading">
-                  Navigation
-              </li>
-              <li data-theme="a">
-                  <a href="#home" data-transition="slide">
-                      Home
-                  </a>
-              </li>
-              <li data-theme="a">
-                  <a href="#additem" data-transition="slide">
-                      New
-                  </a>
-              </li>
-              <li data-theme="a">
-                  <a href="#browse" data-transition="slide">
-                      Browse
-					  <span id="bubbleCount" class="ui-li-count">
-                          1
-                      </span>
-                  </a>
-              </li>
-          </ul>
-      </div>
       <div data-theme="a" data-role="header">
-          <a data-role="button" href="#panel2" data-icon="bars" data-iconpos="notext"
-          class="ui-btn-left">
-          </a>
+          
           <h3>
               Friendsies
           </h3>
+		  <div data-role="navbar" data-iconpos="top">
+            <ul>
+                <li>
+                    <a href="#home" data-transition="fade" data-theme="" data-icon="home">
+                        Home
+                    </a>
+                </li>
+                <li>
+                    <a href="#additem" data-transition="fade" data-theme="" data-icon="plus">
+                        New
+                    </a>
+                </li>
+                <li>
+                    <a href="#browse" data-transition="fade" data-theme="" data-icon="search" onClick="caller()">
+                        Browse
+                    </a>
+                </li>
+                <li>
+                    <a href="#about" data-transition="fade" data-theme="" data-icon="info">
+                        About
+                    </a>
+                </li>
+            </ul>
+        </div>
       </div>
       <div data-role="content">
           <div data-role="fieldcontain" data-controltype="searchinput">
               <input name="" id="searchinput1" placeholder="Search for a friend" value=""
               type="search" data-mini="true">
           </div>
-          <div style="width: 288px; height: 200px; position: relative; background-color: #fbfbfb; border: 1px solid #b8b8b8;"
+          <center><div style="width: 288px; height: 200px; position: relative; background-color: #fbfbfb; border: 1px solid #b8b8b8;"
           data-controltype="image">
-              <a href="#additem"><img src="img/feature.png" alt="image" style="position: absolute; "></a>
+              <a href="#additem"><img src="img/feature.png" alt="image" style="position: absolute; "></a></center>
           </div>
           <ul data-role="listview" data-divider-theme="b" data-inset="true">
               <li data-role="list-divider" role="heading">
@@ -97,52 +93,36 @@
   
   <!-- Add Item Page -->
   <div data-role="page" data-control-title="additem" id="additem">
-      <div data-role="panel" id="panel4" data-position="left" data-display="reveal"
-      data-theme="a">
-          <ul data-role="listview" data-divider-theme="h" data-inset="false">
-              <li data-role="list-divider" role="heading">
-                  Navigation
-              </li>
-              <li data-theme="a">
-                  <a href="#home" data-transition="slide">
-                      Home
-                  </a>
-              </li>
-              <li data-theme="a">
-                  <a href="#additem" data-transition="slide">
-                      New
-                  </a>
-              </li>
-              <li data-theme="a">
-                  <a href="#browse" data-transition="slide">
-                      Browse
-					  <span id="addBubbleCount" class="ui-li-count">
-                          1
-                      </span>
-                  </a>
-              </li>
-          </ul>
-      </div>
-      <div data-role="panel" id="panel3" data-position="left" data-display="reveal"
-      data-theme="a">
-          <ul data-role="listview" data-divider-theme="h" data-inset="false">
-              <li data-role="list-divider" role="heading">
-                  Divider
-              </li>
-              <li data-theme="a">
-                  <a href="#home" data-transition="slide">
-                      Home
-                  </a>
-              </li>
-          </ul>
-      </div>
+
       <div data-theme="a" data-role="header">
-          <a data-role="button" href="#panel4" data-icon="bars" data-iconpos="notext"
-          class="ui-btn-left">
-          </a>
+          
           <h3>
               Friendsies
           </h3>
+		  <div data-role="navbar" data-iconpos="top">
+            <ul>
+                <li>
+                    <a href="#home" data-transition="fade" data-theme="" data-icon="home">
+                        Home
+                    </a>
+                </li>
+                <li>
+                    <a href="#additem" data-transition="fade" data-theme="" data-icon="plus">
+                        New
+                    </a>
+                </li>
+                <li>
+                    <a href="#browse" data-transition="fade" data-theme="" data-icon="search" onClick="caller()">
+                        Browse
+                    </a>
+                </li>
+                <li>
+                    <a href="#about" data-transition="fade" data-theme="" data-icon="info">
+                        About
+                    </a>
+                </li>
+            </ul>
+        </div>
       </div>
       <div data-role="content">
           <form onSubmit="addNew()" data-ajax="false">
@@ -194,67 +174,32 @@
       </div>
   </div>
   <div data-role="page" data-control-title="browse" id="browse">
-      <div data-role="panel" id="panel7" data-position="left" data-display="reveal"
-      data-theme="a">
-          <ul data-role="listview" data-divider-theme="h" data-inset="false">
-              <li data-role="list-divider" role="heading">
-                  Navigation
-              </li>
-              <li data-theme="a">
-                  <a href="#home" data-transition="slide">
-                      Home
-                  </a>
-              </li>
-              <li data-theme="a">
-                  <a href="#additem" data-transition="slide">
-                      New
-                  </a>
-              </li>
-              <li data-theme="a">
-                  <a href="#browse" data-transition="slide">
-                      Browse
-                      <span id="bBubbleCount" class="ui-li-count">
-                          1
-                      </span>
-                  </a>
-              </li>
-          </ul>
-      </div>
-      <div data-role="panel" id="panel5" data-position="left" data-display="reveal"
-      data-theme="a">
-          <ul data-role="listview" data-divider-theme="h" data-inset="false">
-              <li data-role="list-divider" role="heading">
-                  Navigation
-              </li>
-              <li data-theme="a">
-                  <a href="#home" data-transition="slide">
-                      Home
-                  </a>
-              </li>
-              <li data-theme="a">
-                  <a href="#additem" data-transition="slide">
-                      New
-                  </a>
-              </li>
-          </ul>
-      </div>
-      <div data-role="panel" id="panel6" data-position="left" data-display="reveal"
-      data-theme="a">
-          <ul data-role="listview" data-divider-theme="h" data-inset="false">
-              <li data-role="list-divider" role="heading">
-                  Divider
-              </li>
-              <li data-theme="a">
-                  <a href="#home" data-transition="slide">
-                      Home
-                  </a>
-              </li>
-          </ul>
-      </div>
+  
       <div data-theme="a" data-role="header">
-          <a data-role="button" href="#panel7" data-icon="bars" data-iconpos="notext"
-          class="ui-btn-left">
-          </a>
+          <div data-role="navbar" data-iconpos="top">
+            <ul>
+                <li>
+                    <a href="#home" data-transition="fade" data-theme="" data-icon="home">
+                        Home
+                    </a>
+                </li>
+                <li>
+                    <a href="#additem" data-transition="fade" data-theme="" data-icon="plus">
+                        New
+                    </a>
+                </li>
+                <li>
+                    <a href="#browse" data-transition="fade" data-theme="" data-icon="search" onClick="caller()">
+                        Browse
+                    </a>
+                </li>
+                <li>
+                    <a href="#about" data-transition="fade" data-theme="" data-icon="info">
+                        About
+                    </a>
+                </li>
+            </ul>
+        </div>
           <h3>
               Friendsies
           </h3>
@@ -268,12 +213,57 @@
   
   <div data-role="page" data-control-title="details" id="details">
       <div data-theme="a" data-role="header">
-          <a data-role="button" href="#browse" data-icon="bars" data-iconpos="notext"
-          class="ui-btn-left">
-          </a>
+        <div data-role="navbar" data-iconpos="top">
+            <ul>
+                <li>
+                    <a href="#home" data-transition="fade" data-theme="" data-icon="home">
+                        Home
+                    </a>
+                </li>
+                <li>
+                    <a href="#additem" data-transition="fade" data-theme="" data-icon="plus">
+                        New
+                    </a>
+                </li>
+                <li>
+                    <a href="#browse" data-transition="fade" data-theme="" data-icon="search" onClick="caller()">
+                        Browse
+                    </a>
+                </li>
+                <li>
+                    <a href="#about" data-transition="fade" data-theme="" data-icon="info">
+                        About
+                    </a>
+                </li>
+            </ul>
+        </div>
           <h3>
               Friendsies
           </h3>
+		  <div data-role="navbar" data-iconpos="top">
+            <ul>
+                <li>
+                    <a href="#home" data-transition="fade" data-theme="" data-icon="home">
+                        Home
+                    </a>
+                </li>
+                <li>
+                    <a href="#additem" data-transition="fade" data-theme="" data-icon="plus">
+                        New
+                    </a>
+                </li>
+                <li>
+                    <a href="#browse" data-transition="fade" data-theme="" data-icon="search" onClick="caller()">
+                        Browse
+                    </a>
+                </li>
+                <li>
+                    <a href="#about" data-transition="fade" data-theme="" data-icon="info">
+                        About
+                    </a>
+                </li>
+            </ul>
+        </div>
       </div>
       <div data-role="content" id="myContent">
           <ul data-role="listview" data-theme="d" data-inset="true" id="myDetails">
@@ -282,7 +272,75 @@
           </ul>
       </div>
   </div>
+  
+  <div data-role="page" data-control-title="About" id="about">
+    
+    <div data-theme="a" data-role="header">
+        <h3>
+            Friendsies
+        </h3>
+        <div data-role="navbar" data-iconpos="top">
+            <ul>
+                <li>
+                    <a href="#home" data-transition="fade" data-theme="" data-icon="home">
+                        Home
+                    </a>
+                </li>
+                <li>
+                    <a href="#additem" data-transition="fade" data-theme="" data-icon="plus">
+                        New
+                    </a>
+                </li>
+                <li>
+                    <a href="#browse" data-transition="fade" data-theme="" data-icon="search">
+                        Browse
+                    </a>
+                </li>
+                <li>
+                    <a href="#about" data-transition="fade" data-theme="" data-icon="info">
+                        About
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <div data-role="content">
+        <div data-controltype="textblock">
+            <p>
+                <b>
+                    Ben Cain
+                </b>
+            </p>
+            <p>
+                <b>
+                    MIU 0813 Bronze Application
+                </b>
+            </p>
+            <p>
+                <b>
+                    <br>
+                </b>
+            </p>
+            <p>
+                This application allows you to create a simple, effective contact list!
+            </p>
+        </div>
+        <ul data-role="listview" data-divider-theme="b" data-inset="true">
+            <li data-theme="c">
+                <a href="https://github.com/btcain/MIU0813" rel="external"  data-transition="slide">
+                    GitHub
+                </a>
+            </li>
+            <li data-theme="c">
+                <a href="../gold/index.html" rel="external" data-transition="slide">
+                    Bronze App
+                </a>
+            </li>
+        </ul>
+    </div>
+</div>
 </body>
   <!-- Main Javascript -->
+  <script src="js/JSON.js"></script>
   <script src="js/my.js"></script>
 </html>

@@ -123,19 +123,7 @@
               </li>
           </ul>
       </div>
-      <div data-role="panel" id="panel3" data-position="left" data-display="reveal"
-      data-theme="a">
-          <ul data-role="listview" data-divider-theme="h" data-inset="false">
-              <li data-role="list-divider" role="heading">
-                  Divider
-              </li>
-              <li data-theme="a">
-                  <a href="#home" data-transition="slide">
-                      Home
-                  </a>
-              </li>
-          </ul>
-      </div>
+  
       <div data-theme="a" data-role="header">
           <a data-role="button" href="#panel4" data-icon="bars" data-iconpos="notext"
           class="ui-btn-left">
@@ -220,37 +208,7 @@
               </li>
           </ul>
       </div>
-      <div data-role="panel" id="panel5" data-position="left" data-display="reveal"
-      data-theme="a">
-          <ul data-role="listview" data-divider-theme="h" data-inset="false">
-              <li data-role="list-divider" role="heading">
-                  Navigation
-              </li>
-              <li data-theme="a">
-                  <a href="#home" data-transition="slide">
-                      Home
-                  </a>
-              </li>
-              <li data-theme="a">
-                  <a href="#additem" data-transition="slide">
-                      New
-                  </a>
-              </li>
-          </ul>
-      </div>
-      <div data-role="panel" id="panel6" data-position="left" data-display="reveal"
-      data-theme="a">
-          <ul data-role="listview" data-divider-theme="h" data-inset="false">
-              <li data-role="list-divider" role="heading">
-                  Divider
-              </li>
-              <li data-theme="a">
-                  <a href="#home" data-transition="slide">
-                      Home
-                  </a>
-              </li>
-          </ul>
-      </div>
+ 
       <div data-theme="a" data-role="header">
           <a data-role="button" href="#panel7" data-icon="bars" data-iconpos="notext"
           class="ui-btn-left">
@@ -282,7 +240,80 @@
           </ul>
       </div>
   </div>
+  
+ <div data-role="page" data-control-title="About" id="about">
+    <div data-role="panel" id="panel11" data-position="left" data-display="reveal"
+    data-theme="a">
+        <ul data-role="listview" data-divider-theme="h" data-inset="false">
+            <li data-role="list-divider" role="heading">
+                Navigation
+            </li>
+            <li data-theme="a">
+                <a href="#home" data-transition="slide">
+                    Home
+                </a>
+            </li>
+            <li data-theme="a">
+                <a href="#additem" data-transition="slide">
+                    New
+                </a>
+            </li>
+            <li data-theme="a">
+                <a href="#browse" data-transition="slide">
+                    Browse
+                    <span class="ui-li-count">
+                        1
+                    </span>
+                </a>
+            </li>
+        </ul>
+    </div>
+    <div data-theme="a" data-role="header">
+        <a data-role="button" href="#panel11" data-icon="bars" data-iconpos="notext"
+        class="ui-btn-left">
+        </a>
+        <h3>
+            Friendsies
+        </h3>
+    </div>
+    <div data-role="content">
+        <div data-controltype="textblock">
+            <p>
+                <b>
+                    Ben Cain
+                </b>
+            </p>
+            <p>
+                <b>
+                    MIU 0813 Gold Application
+                </b>
+            </p>
+            <p>
+                <b>
+                    <br>
+                </b>
+            </p>
+            <p>
+                This application allows you to create a simple, effective contact list!
+            </p>
+        </div>
+        <ul data-role="listview" data-divider-theme="b" data-inset="true">
+            <li data-theme="c">
+                <a href="https://github.com/btcain/MIU0813" rel="external" data-transition="slide">
+                    GitHub
+                </a>
+            </li>
+            <li data-theme="c">
+                <a href="../bronze/index.html" rel="external" data-transition="slide">
+                    Bronze App
+                </a>
+            </li>
+        </ul>
+    </div>
+</div>
 </body>
   <!-- Main Javascript -->
+  <script src="js/JSON.js"></script>
   <script src="js/my.js"></script>
+  
 </html>

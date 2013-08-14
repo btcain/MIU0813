@@ -4,15 +4,24 @@ $(document).bind("mobileinit", function () {
 
 console.log(localStorage);
 
+if (localStorage.length <= 0) {
+    var myJSON = confirm("Would you like to create sample contacts??");
+    if (myJSON === true) {
+
+        for (var i = 0; i < objItems.length; i++) {
+            localStorage.setItem(objItems[i].id, JSON.stringify(objItems[i]));
+        }
+    } else {
+        alert("Ok, I won't add any contacts for you.");
+    }
+}
 
 function caller() {
 console.log("running caller");
-document.getElementById("bubbleCount").innerText = localStorage.length;
-document.getElementById("bBubbleCount").innerText = localStorage.length;
-document.getElementById("addBubbleCount").innerText = localStorage.length;
     if (localStorage.length === 0) {
         document.getElementById("myContent").innerHTML = "<p>You haven't added any friends yet!</p>";
     } else {
+	document.getElementById("myList").innerHTML=""
         for (var i = 0, j = localStorage.length; i < j; i++) {
             var container = document.getElementById("myList");
             var key = localStorage.key(i);

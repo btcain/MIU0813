@@ -3,6 +3,17 @@ $(document).bind("mobileinit", function () {
 });
 
 console.log(localStorage);
+if (localStorage.length <= 0) {
+    var myJSON = confirm("Would you like to create sample contacts??");
+    if (myJSON === true) {
+
+        for (var i = 0; i < objItems.length; i++) {
+            localStorage.setItem(objItems[i].id, JSON.stringify(objItems[i]));
+        }
+    } else {
+        alert("Ok, I won't add any contacts for you.");
+    }
+}
 
 
 function caller() {
