@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="initial-scale=1.0, user-scalable=no">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black">
+  <title>Friendsies</title>
+
+  <!-- Custom Theme -->
+  <link rel="stylesheet" href="css/jqm.css">
+  <link rel="stylesheet" href="css/custheme.css">
+  
+  <!-- jQuery and jQuery Mobile -->
+  <script src="https://d10ajoocuyu32n.cloudfront.net/jquery-1.9.1.min.js"></script>
+  <script src="https://d10ajoocuyu32n.cloudfront.net/mobile/1.3.1/jquery.mobile-1.3.1.min.js"></script>
+  
+
+</head>
+<body>
+  <div data-role="page" data-control-title="Home" id="home">
+      <div data-role="panel" id="panel2" data-position="left" data-display="reveal"
+      data-theme="a">
+          <ul data-role="listview" data-divider-theme="h" data-inset="false">
+              <li data-role="list-divider" role="heading">
+                  Navigation
+              </li>
+              <li data-theme="a">
+                  <a href="#home" data-transition="slide">
+                      Home
+                  </a>
+              </li>
+              <li data-theme="a">
+                  <a href="#additem" data-transition="slide">
+                      New
+                  </a>
+              </li>
+              <li data-theme="a">
+                  <a href="#browse" data-transition="slide">
+                      Browse
+					  <span id="bubbleCount" class="ui-li-count">
+                          1
+                      </span>
+                  </a>
+              </li>
+          </ul>
+      </div>
+      <div data-theme="a" data-role="header">
+          <a data-role="button" href="#panel2" data-icon="bars" data-iconpos="notext"
+          class="ui-btn-left">
+          </a>
+          <h3>
+              Friendsies
+          </h3>
+      </div>
+      <div data-role="content">
+          <div data-role="fieldcontain" data-controltype="searchinput">
+              <input name="" id="searchinput1" placeholder="Search for a friend" value=""
+              type="search" data-mini="true">
+          </div>
+          <div style="width: 288px; height: 200px; position: relative; background-color: #fbfbfb; border: 1px solid #b8b8b8;"
+          data-controltype="image">
+              <a href="#additem"><img src="img/feature.png" alt="image" style="position: absolute; "></a>
+          </div>
+          <ul data-role="listview" data-divider-theme="b" data-inset="true">
+              <li data-role="list-divider" role="heading">
+                  Browse
+              </li>
+              <li data-theme="c">
+                  <a href="#browse" data-transition="slide">
+                      First Name
+                  </a>
+              </li>
+              <li data-theme="c">
+                  <a href="#browse" data-transition="slide">
+                      Last Name
+                  </a>
+              </li>
+              <li data-theme="c">
+                  <a href="#browse" data-transition="slide">
+                      Phone Number
+                  </a>
+              </li>
+              <li data-theme="c">
+                  <a href="#browse" data-transition="slide">
+                      Email
+                  </a>
+              </li>
+              <li data-theme="c">
+                  <a href="#browse" data-transition="slide">
+                      Favorites
+                  </a>
+              </li>
+          </ul>
+      </div>
+  </div>
+  
+  <!-- Add Item Page -->
+  <div data-role="page" data-control-title="additem" id="additem">
+      <div data-role="panel" id="panel4" data-position="left" data-display="reveal"
+      data-theme="a">
+          <ul data-role="listview" data-divider-theme="h" data-inset="false">
+              <li data-role="list-divider" role="heading">
+                  Navigation
+              </li>
+              <li data-theme="a">
+                  <a href="#home" data-transition="slide">
+                      Home
+                  </a>
+              </li>
+              <li data-theme="a">
+                  <a href="#additem" data-transition="slide">
+                      New
+                  </a>
+              </li>
+              <li data-theme="a">
+                  <a href="#browse" data-transition="slide">
+                      Browse
+					  <span id="addBubbleCount" class="ui-li-count">
+                          1
+                      </span>
+                  </a>
+              </li>
+          </ul>
+      </div>
+      <div data-role="panel" id="panel3" data-position="left" data-display="reveal"
+      data-theme="a">
+          <ul data-role="listview" data-divider-theme="h" data-inset="false">
+              <li data-role="list-divider" role="heading">
+                  Divider
+              </li>
+              <li data-theme="a">
+                  <a href="#home" data-transition="slide">
+                      Home
+                  </a>
+              </li>
+          </ul>
+      </div>
+      <div data-theme="a" data-role="header">
+          <a data-role="button" href="#panel4" data-icon="bars" data-iconpos="notext"
+          class="ui-btn-left">
+          </a>
+          <h3>
+              Friendsies
+          </h3>
+      </div>
+      <div data-role="content">
+          <form onSubmit="addNew()" data-ajax="false">
+              <div data-role="fieldcontain" data-controltype="textinput">
+                  <label for="fName">
+                      First Name
+                  </label>
+                  <input name="" id="fName" placeholder="John" value="" type="text" data-mini="true">
+              </div>
+              <div data-role="fieldcontain" data-controltype="textinput">
+                  <label for="lName">
+                      Last Name
+                  </label>
+                  <input name="" id="lName" placeholder="Smith" value="" type="text" data-mini="true">
+              </div>
+              <div data-role="fieldcontain" data-controltype="textinput">
+                  <label for="pNumber">
+                      Phone Number
+                  </label>
+                  <input name="" id="pNumber" placeholder="2607468465" value="" type="tel" data-mini="true">
+              </div>
+              <div data-role="fieldcontain" data-controltype="textinput">
+                  <label for="email">
+                      Email
+                  </label>
+                  <input name="" id="email" placeholder="hello@email.com" value="" type="email" data-mini="true">
+              </div>
+              <div data-role="fieldcontain" data-controltype="textinput">
+                  <label for="pAddress">
+                      Address
+                  </label>
+                  <input name="" id="pAddress" placeholder="1551 Somewhere St" value="" type="text" data-mini="true">
+              </div>
+              <div id="fav" data-role="fieldcontain" data-controltype="checkboxes">
+                  <fieldset data-role="controlgroup" data-type="vertical" data-mini="true">
+                      <input id="fav" name="" type="checkbox" value="">
+                      <label for="fav">
+                          Save as Favorite
+                      </label>
+                  </fieldset>
+              </div>
+              <input type="submit" data-inline="true" value="Submit">
+              <a data-role="button" data-inline="true" href="#additem">
+                  Cancel
+              </a>
+			 
+			  
+          </form>
+      </div>
+  </div>
+  <div data-role="page" data-control-title="browse" id="browse">
+      <div data-role="panel" id="panel7" data-position="left" data-display="reveal"
+      data-theme="a">
+          <ul data-role="listview" data-divider-theme="h" data-inset="false">
+              <li data-role="list-divider" role="heading">
+                  Navigation
+              </li>
+              <li data-theme="a">
+                  <a href="#home" data-transition="slide">
+                      Home
+                  </a>
+              </li>
+              <li data-theme="a">
+                  <a href="#additem" data-transition="slide">
+                      New
+                  </a>
+              </li>
+              <li data-theme="a">
+                  <a href="#browse" data-transition="slide">
+                      Browse
+                      <span id="bBubbleCount" class="ui-li-count">
+                          1
+                      </span>
+                  </a>
+              </li>
+          </ul>
+      </div>
+      <div data-role="panel" id="panel5" data-position="left" data-display="reveal"
+      data-theme="a">
+          <ul data-role="listview" data-divider-theme="h" data-inset="false">
+              <li data-role="list-divider" role="heading">
+                  Navigation
+              </li>
+              <li data-theme="a">
+                  <a href="#home" data-transition="slide">
+                      Home
+                  </a>
+              </li>
+              <li data-theme="a">
+                  <a href="#additem" data-transition="slide">
+                      New
+                  </a>
+              </li>
+          </ul>
+      </div>
+      <div data-role="panel" id="panel6" data-position="left" data-display="reveal"
+      data-theme="a">
+          <ul data-role="listview" data-divider-theme="h" data-inset="false">
+              <li data-role="list-divider" role="heading">
+                  Divider
+              </li>
+              <li data-theme="a">
+                  <a href="#home" data-transition="slide">
+                      Home
+                  </a>
+              </li>
+          </ul>
+      </div>
+      <div data-theme="a" data-role="header">
+          <a data-role="button" href="#panel7" data-icon="bars" data-iconpos="notext"
+          class="ui-btn-left">
+          </a>
+          <h3>
+              Friendsies
+          </h3>
+      </div>
+      <div data-role="content" id="myContent">
+          <ul data-role="listview" data-filter="true" data-theme="d" data-divider-theme="b" data-inset="true" id="myList" data-autodividers="true">
+              
+          </ul>
+      </div>
+  </div>
+  
+  <div data-role="page" data-control-title="details" id="details">
+      <div data-theme="a" data-role="header">
+          <a data-role="button" href="#browse" data-icon="arrow-l" data-iconpos="notext"
+          class="ui-btn-left">
+          </a>
+          <h3>
+              Friendsies
+          </h3>
+      </div>
+      <div data-role="content" id="myContent">
+          <ul data-role="listview" data-theme="d" data-inset="true" id="myDetails">
+              <li><h3>Ben Cain</h3>
+			  <p>Address: 46845 Somewhere St.</p>
+          </ul>
+      </div>
+  </div>
+</body>
+  <!-- Main Javascript -->
+  <script src="js/my.js"></script>
+</html>
