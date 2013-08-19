@@ -72,6 +72,7 @@ function deleteme(key){
 var cm = confirm("Are you sure you want to delete this contact?");
 if (cm === true){
 	localStorage.removeItem(key);
+	document.location.href = "#browse";A
 	document.location.reload(true);
 	}else{
 		alert("Action Cancelled");
@@ -82,11 +83,11 @@ function editMe(key){
 var retrievedObject = localStorage.getItem(key);
 document.location.href = "#additem";
 console.log(retrievedObject);
-document.getElementById("fName").value = "hello";
+document.getElementById("fName").value = JSON.parse(retrievedObject).fName;
 document.getElementById("lName").value = JSON.parse(retrievedObject).lName;
 document.getElementById("pAddress").value = JSON.parse(retrievedObject).address;
 document.getElementById("email").value = JSON.parse(retrievedObject).email;
-document.getElementById("phone").value = JSON.parse(retrievedObject).pNumber;
+document.getElementById("pNumber").value = JSON.parse(retrievedObject).phone;
 document.getElementById("fav").value = JSON.parse(retrievedObject).fav;
 localStorage.removeItem(retrievedObject);
 };
