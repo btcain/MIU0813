@@ -1,8 +1,4 @@
-$(document).bind("mobileinit", function () {
-    $.mobile.ajaxEnabled = false;
-});
-
-console.log(localStorage);
+$('#home').on('pageinit', function(){
 if (localStorage.length <= 0) {
     var myJSON = confirm("Would you like to create sample contacts??");
     if (myJSON === true) {
@@ -15,8 +11,26 @@ if (localStorage.length <= 0) {
     }
 }
 
+});	
+		
+$('#additem').on('pageinit', function(){
+
+		var myForm = $('#myform');
+		    myForm.validate({
+			invalidHandler: function(form, validator) {
+			},
+			submitHandler: function() {
+		var data = myForm.serializeArray();
+			addNew();
+		}
+	});
+	
+});
+
+
 
 function caller() {
+document.getElementById("myList").innerHTML = "";
 console.log("running caller");
 document.getElementById("bubbleCount").innerText = localStorage.length;
 document.getElementById("bBubbleCount").innerText = localStorage.length;
@@ -79,6 +93,19 @@ if (cm === true){
 	}
 }
 
+function deleteAll(){
+	var confirmation = confirm("Are you sure you wish to delete ALL contacts? This is irreversable!")
+	if (confirmation === true) {
+localStorage.clear();
+alert("Ok, i've deleted all your contacts.");
+location.href="#home";
+location.reload();
+    } else {
+        alert("Ok, I'll keep your contacts!");
+        
+    }
+};
+
 function editMe(key){
 var retrievedObject = localStorage.getItem(key);
 document.location.href = "#additem";
@@ -92,6 +119,19 @@ document.getElementById("fav").value = JSON.parse(retrievedObject).fav;
 localStorage.removeItem(retrievedObject);
 };
 
+var refreshme = 0;
+$('div').on('pageshow',function(event, ui){
+console.log(event);
+console.log(event.currentTarget.id);
+if(event.currentTarget.id === "details"){
+	console.log("details?");
+}else{
+	console.log("Not details?");
+		
+}
+
+  //location.reload();
+});
 	
 function addNew() {
     var nEntry = {
@@ -106,9 +146,8 @@ function addNew() {
     localStorage.setItem(nEntry.id, JSON.stringify(nEntry));
     console.log(localStorage);
     console.log(nEntry);
+    window.location = "#home";
     caller();
 };	
 
-
-
-window.onLoad = caller();
+window.onload= 	caller();
