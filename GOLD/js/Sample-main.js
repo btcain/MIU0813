@@ -119,19 +119,21 @@ document.getElementById("fav").value = JSON.parse(retrievedObject).fav;
 localStorage.removeItem(retrievedObject);
 };
 
-var refreshme = 0;
-$('div').on('pageshow',function(event, ui){
+/*
+$('div').on('pagehide',function(event, ui){
 console.log(event);
 console.log(event.currentTarget.id);
 if(event.currentTarget.id === "details"){
 	console.log("details?");
+	$.mobile.activePage.attr("id")
 }else{
 	console.log("Not details?");
+	$.mobile.activePage.attr("id")
 		
 }
+*/
 
   //location.reload();
-});
 	
 function addNew() {
     var nEntry = {
