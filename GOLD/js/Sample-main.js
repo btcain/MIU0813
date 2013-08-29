@@ -116,7 +116,7 @@ document.getElementById("pAddress").value = JSON.parse(retrievedObject).address;
 document.getElementById("email").value = JSON.parse(retrievedObject).email;
 document.getElementById("pNumber").value = JSON.parse(retrievedObject).phone;
 document.getElementById("fav").value = JSON.parse(retrievedObject).fav;
-localStorage.removeItem(retrievedObject);
+localStorage.removeItem(key);
 };
 
 /*
